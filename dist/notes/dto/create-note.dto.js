@@ -10,24 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateNoteDto = void 0;
-const class_validator_1 = require("class-validator");
-class CreateNoteDto {
-}
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.Min)(1),
-    (0, class_validator_1.Max)(20),
-    __metadata("design:type", String)
-], CreateNoteDto.prototype, "noteName", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.Min)(1),
-    __metadata("design:type", String)
-], CreateNoteDto.prototype, "category", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.Max)(60),
-    __metadata("design:type", String)
-], CreateNoteDto.prototype, "content", void 0);
+var class_validator_1 = require("class-validator");
+var CreateNoteDto = (function () {
+    function CreateNoteDto() {
+    }
+    __decorate([
+        (0, class_validator_1.IsString)(),
+        __metadata("design:type", String)
+    ], CreateNoteDto.prototype, "noteName", void 0);
+    __decorate([
+        (0, class_validator_1.IsString)(),
+        __metadata("design:type", String)
+    ], CreateNoteDto.prototype, "category", void 0);
+    __decorate([
+        (0, class_validator_1.IsString)(),
+        __metadata("design:type", String)
+    ], CreateNoteDto.prototype, "content", void 0);
+    return CreateNoteDto;
+}());
 exports.CreateNoteDto = CreateNoteDto;
 //# sourceMappingURL=create-note.dto.js.map

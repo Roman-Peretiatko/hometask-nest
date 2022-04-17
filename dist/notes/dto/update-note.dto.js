@@ -10,24 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateNoteDto = void 0;
-const class_validator_1 = require("class-validator");
-class UpdateNoteDto {
-}
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.Min)(1),
-    (0, class_validator_1.Max)(20),
-    __metadata("design:type", String)
-], UpdateNoteDto.prototype, "noteName", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.Min)(1),
-    __metadata("design:type", String)
-], UpdateNoteDto.prototype, "category", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.Max)(60),
-    __metadata("design:type", String)
-], UpdateNoteDto.prototype, "content", void 0);
+var class_validator_1 = require("class-validator");
+var UpdateNoteDto = (function () {
+    function UpdateNoteDto() {
+    }
+    __decorate([
+        (0, class_validator_1.IsString)(),
+        __metadata("design:type", String)
+    ], UpdateNoteDto.prototype, "noteName", void 0);
+    __decorate([
+        (0, class_validator_1.IsString)(),
+        __metadata("design:type", String)
+    ], UpdateNoteDto.prototype, "category", void 0);
+    __decorate([
+        (0, class_validator_1.IsString)(),
+        __metadata("design:type", String)
+    ], UpdateNoteDto.prototype, "content", void 0);
+    return UpdateNoteDto;
+}());
 exports.UpdateNoteDto = UpdateNoteDto;
 //# sourceMappingURL=update-note.dto.js.map

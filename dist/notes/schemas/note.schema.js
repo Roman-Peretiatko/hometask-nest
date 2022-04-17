@@ -10,24 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NoteSchema = exports.Note = void 0;
-const mongoose_1 = require("@nestjs/mongoose");
-let Note = class Note {
-};
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], Note.prototype, "noteName", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], Note.prototype, "category", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], Note.prototype, "content", void 0);
-Note = __decorate([
-    (0, mongoose_1.Schema)()
-], Note);
+var mongoose_1 = require("@nestjs/mongoose");
+var Note = (function () {
+    function Note() {
+    }
+    __decorate([
+        (0, mongoose_1.Prop)(),
+        __metadata("design:type", String)
+    ], Note.prototype, "noteName", void 0);
+    __decorate([
+        (0, mongoose_1.Prop)(),
+        __metadata("design:type", String)
+    ], Note.prototype, "category", void 0);
+    __decorate([
+        (0, mongoose_1.Prop)(),
+        __metadata("design:type", String)
+    ], Note.prototype, "content", void 0);
+    Note = __decorate([
+        (0, mongoose_1.Schema)()
+    ], Note);
+    return Note;
+}());
 exports.Note = Note;
 exports.NoteSchema = mongoose_1.SchemaFactory.createForClass(Note);
 //# sourceMappingURL=note.schema.js.map

@@ -7,22 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
-const common_1 = require("@nestjs/common");
-const mongoose_1 = require("@nestjs/mongoose");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const notes_module_1 = require("./notes/notes.module");
-let AppModule = class AppModule {
-};
-AppModule = __decorate([
-    (0, common_1.Module)({
-        imports: [
-            notes_module_1.NotesModule,
-            mongoose_1.MongooseModule.forRoot(`mongodb+srv://user:user@cluster0.4omi6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
-        ],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
-    })
-], AppModule);
+var common_1 = require("@nestjs/common");
+var mongoose_1 = require("@nestjs/mongoose");
+var app_controller_1 = require("./app.controller");
+var app_service_1 = require("./app.service");
+var notes_module_1 = require("./notes/notes.module");
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        (0, common_1.Module)({
+            imports: [
+                notes_module_1.NotesModule,
+                mongoose_1.MongooseModule.forRoot("mongodb+srv://user:user@cluster0.4omi6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+            ],
+            controllers: [app_controller_1.AppController],
+            providers: [app_service_1.AppService],
+        })
+    ], AppModule);
+    return AppModule;
+}());
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

@@ -7,21 +7,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NotesModule = void 0;
-const common_1 = require("@nestjs/common");
-const notes_service_1 = require("./notes.service");
-const notes_controller_1 = require("./notes.controller");
-const mongoose_1 = require("@nestjs/mongoose");
-const note_schema_1 = require("./schemas/note.schema");
-let NotesModule = class NotesModule {
-};
-NotesModule = __decorate([
-    (0, common_1.Module)({
-        imports: [mongoose_1.MongooseModule.forFeature([
-                { name: note_schema_1.Note.name, schema: note_schema_1.NoteSchema }
-            ])],
-        providers: [notes_service_1.NotesService],
-        controllers: [notes_controller_1.NotesController]
-    })
-], NotesModule);
+var common_1 = require("@nestjs/common");
+var notes_service_1 = require("./notes.service");
+var notes_controller_1 = require("./notes.controller");
+var mongoose_1 = require("@nestjs/mongoose");
+var note_schema_1 = require("./schemas/note.schema");
+var NotesModule = (function () {
+    function NotesModule() {
+    }
+    NotesModule = __decorate([
+        (0, common_1.Module)({
+            imports: [mongoose_1.MongooseModule.forFeature([
+                    { name: note_schema_1.Note.name, schema: note_schema_1.NoteSchema }
+                ])],
+            providers: [notes_service_1.NotesService],
+            controllers: [notes_controller_1.NotesController]
+        })
+    ], NotesModule);
+    return NotesModule;
+}());
 exports.NotesModule = NotesModule;
 //# sourceMappingURL=notes.module.js.map
